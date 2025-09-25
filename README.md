@@ -1,0 +1,1 @@
+This repo created for support ticket in Railway and testing before it the termination signals for dockerised Node project

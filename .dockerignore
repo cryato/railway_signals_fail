@@ -1,0 +1,15 @@
+node_modules
+npm-debug.log*
+Dockerfile*
+docker-compose.yml
+.env
+.git
+.gitignore
+**/.DS_Store
+service-account.json
+*.service-account.json
+*.gsa.json
+*.gcp-key.json
+*.google-credentials.json
+cors.json
+/flows
