@@ -1,18 +1,17 @@
-# Bot: Node.js runtime
 FROM node:20-slim
 
-# Create app dir
 WORKDIR /app
 
-# Install deps first
+# Install only production dependencies
 COPY package.json package-lock.json ./
 RUN npm ci --omit=dev
 
 # Copy source
 COPY index.js ./
 
-# Env and run
 ENV NODE_ENV=production
 
-# TELEGRAM_BOT_TOKEN must be provided at runtime
+# Run Node directly (no npm) so signals are delivered to PID 1
 ENTRYPOINT ["node", "index.js"]
+
+
