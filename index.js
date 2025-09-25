@@ -35,8 +35,10 @@ try {
 // Liveness heartbeat: log a message every minute with initial launch UTC time
 const launchUtcIso = new Date().toISOString();
 console.log('Launch time (UTC): ' + launchUtcIso);
+console.log(process.env.RAILWAY_DEPLOYMENT_DRAINING_SECONDS, 'RAILWAY_DEPLOYMENT_DRAINING_SECONDS')
 setInterval(() => {
   try {
-    console.log(`Still alive. Initial launch (UTC): ${launchUtcIso}`);
+  
+    console.log(`Still alive. Initial launch (UTC): ${launchUtcIso}.`);
   } catch (_) {}
 }, 60 * 1000);

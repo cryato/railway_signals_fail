@@ -1,0 +1,10 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: railway_signals_fail:latest
+    restart: on-failure
+    environment:
+      - NODE_ENV=production
+
