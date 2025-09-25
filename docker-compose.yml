@@ -6,8 +6,6 @@ services:
       dockerfile: Dockerfile.bot
     image: supportable/bot:local
     container_name: supportable_bot
-    init: true
-    tty: true
     restart: no
     stop_grace_period: 15s
     environment:
