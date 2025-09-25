@@ -1,5 +1,5 @@
 # Bot: Node.js runtime
-FROM node:20-alpine
+FROM node:20-slim
 
 # Create app dir
 WORKDIR /app
